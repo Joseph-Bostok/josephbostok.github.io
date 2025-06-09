@@ -3,105 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joseph Bostok - Resume</title>
+  <title>[Your Name] | Drum Instructor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f6f8;
-      color: #333;
-      padding: 40px 20px;
-      animation: fadeIn 1.5s ease-in;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
     }
-
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #ffffff;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #dddddd;
+    }
     .container {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      padding: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
       border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-      animation: slideUp 0.9s ease-out;
     }
-
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-      color: #2a2a2a;
-    }
-
     h2 {
-      font-size: 1.4rem;
-      margin-top: 30px;
-      color: #555;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 4px;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
     }
-
-    p, li {
-      margin: 10px 0;
-      line-height: 1.6;
-    }
-
     ul {
-      padding-left: 20px;
+      list-style-type: disc;
+      padding-left: 1.5rem;
     }
-
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
     a {
-      color: #007acc;
+      color: #89c9ff;
       text-decoration: none;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideUp {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>[Your Name]</h1>
+    <p>Professional Drummer & Music Instructor</p>
+    <p>📍 [City, State] | 📧 <a href="mailto:you@example.com">you@example.com</a> | 📞 (123) 456-7890</p>
+  </header>
+
   <div class="container">
-    <h1>Joseph Bostok</h1>
-    <p>Email: your.email@example.com | GitHub: <a href="https://github.com/joseph-bostok">joseph-bostok</a></p>
-    <p>Location: Charlotte, NC</p>
+    <section>
+      <h2>About Me</h2>
+      <p>I’m a passionate drummer with over [X] years of experience. I teach students of all ages and specialize in rock, jazz, funk, and marching percussion. Whether you're a complete beginner or looking to refine your skills, I can help you achieve your drumming goals.</p>
+    </section>
 
-    <h2>Summary</h2>
-    <p>Motivated CS student with a passion for AI, HPC, and software engineering. Experienced in full-stack development, parallel programming, and data analysis.</p>
+    <section>
+      <h2>Services</h2>
+      <ul>
+        <li>🥁 Private Drum Lessons (In-person or Virtual)</li>
+        <li>🎧 Online Coaching Sessions</li>
+        <li>🎶 Live Performances & Studio Work</li>
+        <li>📚 Beginner Music Theory & Reading</li>
+      </ul>
+      <p><strong>Rates:</strong> Starting at $30 per 30-minute session</p>
+    </section>
 
-    <h2>Education</h2>
-    <p><strong>University of North Carolina at Charlotte</strong><br />
-    MS in Computer Science (Focus: AI, HPC)<br />
-    Expected Graduation: May 2026</p>
+    <section>
+      <h2>Experience</h2>
+      <p><strong>Freelance Drum Instructor</strong> – 2020 to Present</p>
+      <ul>
+        <li>Weekly private lessons for students aged 8 to 40</li>
+        <li>Custom lesson plans based on student goals</li>
+      </ul>
+      <p><strong>Drummer – [Band/Group Name]</strong> – 2018 to 2023</p>
+      <ul>
+        <li>Performed at over 50 venues</li>
+        <li>Specialized in high-energy, precise performances</li>
+      </ul>
+    </section>
 
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> Python, JavaScript, C++, C</li>
-      <li><strong>Tools:</strong> Git, Docker, MongoDB, Supabase, Node.js</li>
-      <li><strong>Frameworks:</strong> React, Tailwind CSS, Express</li>
-    </ul>
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li>[School Name], Music Performance – [Year]</li>
+        <li>Workshops with [Drummer Name] – [Year]</li>
+      </ul>
+    </section>
 
-    <h2>Projects</h2>
-    <p><strong>Wellness Tracker App</strong> – Full-stack health tracking app with login, MongoDB backend, and Tailwind React UI.</p>
-    <p><strong>AI-powered “Future Self” App</strong> – LLM-based mental health tool using Zephyr and face-to-3D model tracking.</p>
+    <section>
+      <h2>Testimonials</h2>
+      <p>"[Your Name] is the best drum teacher I've had. He makes lessons fun and easy to follow." – Student A</p>
+      <p>"Incredible performer and an even better coach!" – Bandmate B</p>
+    </section>
+  </div>
 
-    <h2>Experience</h2>
-    <p><strong>HealthQuest Innovative Therapeutics</strong><br />
-    Software Intern – Built clinician tools to automate contract generation, saving hours weekly. Developed internal tools and dashboards.</p>
+  <div class="footer">
+    <p>© 2025 [Your Name] | Built with ❤️ and hosted on <a href="https://github.com/">GitHub Pages</a></p>
   </div>
 </body>
 </html>
