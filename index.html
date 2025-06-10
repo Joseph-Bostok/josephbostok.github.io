@@ -321,6 +321,60 @@
             text-align: center;
         }
 
+        /* Additional Gallery Section */
+        .additional-gallery {
+            margin-top: 3rem;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-photo {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-photo:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .gallery-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-photo:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-photo .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: var(--white);
+            padding: 1.5rem 1rem 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-photo:hover .photo-overlay {
+            transform: translateY(0);
+        }
+
         /* Lightbox */
         .lightbox {
             display: none;
@@ -580,6 +634,11 @@
             .photo-item {
                 height: 80px;
             }
+
+            .photo-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
             
             .lightbox-content {
                 width: 95%;
@@ -708,6 +767,66 @@
                     </div>
                 </div>
             </div>
+
+            <div class="additional-gallery">
+                <h3 style="color: var(--white); font-size: 1.8rem; margin-bottom: 1.5rem;">More Photos</h3>
+                <div class="photo-grid">
+                    <div class="gallery-photo" onclick="openLightbox('IMG_0440.jpg', 'Performance Photo 1')">
+                        <img src="IMG_0440.jpg" alt="Performance photo">
+                        <div class="photo-overlay">
+                            <span>🔍 Click to view</span>
+                        </div>
+                    </div>
+                    <div class="gallery-photo" onclick="openLightbox('IMG_0465.jpg', 'Performance Photo 2')">
+                        <img src="IMG_0465.jpg" alt="Performance photo">
+                        <div class="photo-overlay">
+                            <span>🔍 Click to view</span>
+                        </div>
+                    </div>
+                    <div class="gallery-photo" onclick="openLightbox('IMG_0855.jpg', 'Performance Photo 3')">
+                        <img src="IMG_0855.jpg" alt="Performance photo">
+                        <div class="photo-overlay">
+                            <span>🔍 Click to view</span>
+                        </div>
+                    </div>
+                    <div class="gallery-photo" onclick="openLightbox('IMG_1026.jpg', 'Performance Photo 4')">
+                        <img src="IMG_1026.jpg" alt="Performance photo">
+                        <div class="photo-overlay">
+                            <span>🔍 Click to view</span>
+                        </div>
+                    </div>
+                    <div class="gallery-photo" onclick="openLightbox('IMG_1086.jpg', 'Performance Photo 5')">
+                        <img src="IMG_1086.jpg" alt="Performance photo">
+                        <div class="photo-overlay">
+                            <span>🔍 Click to view</span>
+                        </div>
+                    </div>
+                    <div class="gallery-photo" onclick="openLightbox('IMG_1227.jpg', 'Performance Photo 6')">
+                        <img src="IMG_1227.jpg" alt="Performance photo">
+                        <div class="photo-overlay">
+                            <span>🔍 Click to view</span>
+                        </div>
+                    </div>
+                    <div class="gallery-photo" onclick="openLightbox('IMG_1228.jpg', 'Performance Photo 7')">
+                        <img src="IMG_1228.jpg" alt="Performance photo">
+                        <div class="photo-overlay">
+                            <span>🔍 Click to view</span>
+                        </div>
+                    </div>
+                    <div class="gallery-photo" onclick="openLightbox('IMG_1571.jpg', 'Performance Photo 8')">
+                        <img src="IMG_1571.jpg" alt="Performance photo">
+                        <div class="photo-overlay">
+                            <span>🔍 Click to view</span>
+                        </div>
+                    </div>
+                    <div class="gallery-photo" onclick="openLightbox('IMG_1914.jpg', 'Performance Photo 9')">
+                        <img src="IMG_1914.jpg" alt="Performance photo">
+                        <div class="photo-overlay">
+                            <span>🔍 Click to view</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Lightbox Modal -->
@@ -759,37 +878,4 @@
 
     <script>
         function openLightbox(imageSrc, caption) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImage = document.getElementById('lightbox-image');
-            const lightboxCaption = document.getElementById('lightbox-caption');
-            
-            lightboxImage.src = imageSrc;
-            lightboxCaption.textContent = caption;
-            lightbox.style.display = 'block';
-            
-            // Prevent body scrolling when lightbox is open
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.style.display = 'none';
-            
-            // Re-enable body scrolling
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close lightbox with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeLightbox();
-            }
-        });
-
-        // Prevent lightbox from closing when clicking on the image
-        document.getElementById('lightbox-image').addEventListener('click', function(event) {
-            event.stopPropagation();
-        });
-    </script>
-</body>
-</html>
+            const lightbox = document.getElementById('light
